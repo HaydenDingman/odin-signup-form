@@ -1,7 +1,10 @@
 :root {
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5rem;
     --right-side-padding:3rem;
+    --main-background:#fff;
+    --dark-gray: rgb(82, 86, 87);
 }
 
 * {
@@ -11,12 +14,16 @@
     box-sizing: border-box;
     font-size: inherit;
     font-family:inherit;
+    line-height: inherit;
+}
+
+body {    
+    width:100vw;
+    min-height:100vh;
 }
 
 main {
     display:flex;
-    width:100vw;
-    height:100vh;
 }
 
 .icon-sidebar {
@@ -65,7 +72,7 @@ main {
 
 .form-content {
     flex:3;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(240, 251, 253);
     
     display:flex;
     flex-direction: column;
@@ -74,7 +81,6 @@ main {
 
 .form-header {
     height:30vh;
-    font-size: 1.5rem;
     padding:var(--right-side-padding);
     display:flex;
     align-items: end;
@@ -82,16 +88,46 @@ main {
 
 .form-header h2 {
     max-width:60ch;
+    font-size: 1.5rem;
 }
 
 
 .form-main {
-    height:30vh;
+    min-height:35vh;
     background-color: #fff;
-    padding:var(--right-side-padding);
+    padding: 1.5rem var(--right-side-padding);
+    box-shadow: 0px 5px 10px rgb(81, 81, 81, .2);
+}
+
+.form-main h2 {
+    font-size: 1.7rem;
+    color:var(--dark-gray)
+}
+
+.form-main form {
+    display:flex;
+    flex-wrap: wrap;
+    overflow:auto;
+}
+
+.form-component {
+    margin-top:1rem;
+    flex: 1 1 40%;
+}
+
+label {
+    display:block;
+    padding-bottom: .5rem;
+    color: var(--dark-gray);
+}
+
+.form-component input {
+    width:90%;
+    border:2px solid var(--dark-gray);
+    border-radius: 3px;
 }
 
 .form-footer {
-    height:40vh;
+    height:35vh;
     padding:var(--right-side-padding);
 }
