@@ -18,8 +18,8 @@
 }
 
 body {
-    width: 100vw;
-    min-height: 100vh;
+    max-width: 100vw;
+    max-height: 100vh;
 }
 
 main {
@@ -63,7 +63,8 @@ main {
 
 .image-attribution {
     color: #515151;
-    padding: 15px;
+    padding-bottom:5vh;
+    font-size: .8rem;
 }
 
 .image-attribution a {
@@ -80,7 +81,7 @@ main {
 }
 
 .form-header {
-    height: 30vh;
+    min-height: 30vh;
     padding: var(--right-side-padding);
     display: flex;
     align-items: end;
@@ -102,6 +103,7 @@ main {
 
 .form-main h2 {
     font-size: 1.7rem;
+    padding-bottom: 1rem;
     color: var(--dark-gray);
     font-family: "cabin", sans-serif;
 }
@@ -113,7 +115,7 @@ main {
 }
 
 .form-component {
-    margin-top: 1rem;
+    padding: 0.5rem 0.5rem;
     flex: 1 1 40%;
 }
 
@@ -142,6 +144,10 @@ label {
 .form-component input:placeholder-shown {
     background-color:#fff;
     color:#9e9e9e;
+}
+
+.form-component input:focus {
+    outline:2px solid rgb(69, 146, 146);
 }
 
 .form-component input:invalid + span {
