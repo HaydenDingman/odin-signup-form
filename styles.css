@@ -30,7 +30,7 @@ main {
     flex: 2;
     background-color: antiquewhite;
     background-image: url("assets/iso10-38OTHc-zU6c-unsplash.jpg");
-    background-size: contain;
+    background-size: auto 100vh;
 
     display: flex;
     flex-direction: column;
